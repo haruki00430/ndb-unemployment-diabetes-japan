@@ -1,0 +1,107 @@
+# Configuration for Diabetes Prevalence and Unemployment Rate Study
+# Project: NDB_XXX_diabetes_unemployment
+# Created: 2026-03-23
+# Theme 11: 失業率と2型糖尿病有病率の地域格差
+
+experiment_mode: false
+
+project_name: "Diabetes_Unemployment_Study"
+project_id: "NDB_XXX_diabetes_unemployment"
+target_theme: "失業率と2型糖尿病有病率の地域格差（社会的決定要因研究）"
+research_design: "cross-sectional"
+
+# API Keys
+api_keys:
+  estat_api_key: "8ee5a987b9ec70631de1977bde3afd7ebc11140d"
+
+# Exposure Variable
+exposure_variable:
+  name: "失業率"
+  description: "都道府県別完全失業率（e-Stat 労働力調査 2022年）"
+  variable_name: "unemployment_rate"
+  data_source: "e-Stat"
+  estat_table_id: "0003117644"  # 都道府県別労働力調査
+
+# Outcome Variables
+outcome_variables:
+  hba1c_high_rate:
+    name: "HbA1c高値割合"
+    description: "特定健診受診者のうちHbA1c≥6.5%の割合（糖尿病有病率代理指標）"
+    variable_name: "hba1c_high_rate"
+    threshold: 6.5
+    data_source: "NDB特定健診"
+    file: "HbA1c 都道府県別性年齢階級別分布.xlsx"
+
+  dm_drug_per_10k:
+    name: "糖尿病用剤処方量"
+    description: "人口1万人あたり糖尿病用剤（薬効分類396）処方数量"
+    variable_name: "dm_drug_per_10k"
+    drug_classification: 396
+    data_source: "NDB処方薬"
+
+# Adjustment Variables (Confounders)
+adjustment_variables:
+  aging_rate:
+    name: "高齢化率"
+    variable_name: "aging_rate"
+    description: "65歳以上人口割合（国勢調査2020年）"
+
+  income_per_capita:
+    name: "一人あたり所得"
+    variable_name: "income_per_capita"
+    description: "都道府県民所得（千円/人）"
+
+  pop_density:
+    name: "人口密度"
+    variable_name: "pop_density"
+    description: "人口密度（人/km²）"
+
+# Input Paths
+input_paths:
+  ndb_opendata: "02_Data/raw/NDB_OpenData/No.10"
+  examination: "02_Data/raw/NDB_OpenData/No.10/07_特定健診 検査/01_公費レセプトを含まないデータ/（※1）NDBの特定健診情報のうち、基本情報レコードと健診結果・問診結果情報レコードを集計したもの"
+  prescription: "02_Data/raw/NDB_OpenData/No.10/05_処方薬/01_公費レセプトを含まないデータ/01_処方薬（内服／外用／注射）"
+  # Reuse diabetes_ses intermediate data
+  diabetes_ses_interim: "projects/NDB_XXX_diabetes_ses/data/interim/analysis_dataset_final.csv"
+
+# Output Paths
+output_paths:
+  interim: "projects/NDB_XXX_diabetes_unemployment/data/interim"
+  results: "projects/NDB_XXX_diabetes_unemployment/results"
+  figures: "projects/NDB_XXX_diabetes_unemployment/results/figures"
+
+# Analysis Parameters
+analysis_parameters:
+  alpha: 0.05
+  regression_type: "OLS"
+  check_multicollinearity: true
+  vif_threshold: 5.0
+  sensitivity_specs: 6  # 6仕様感度分析
+
+# Visualization
+visualization:
+  japanese_font: "Meiryo"
+  dpi: 300
+  color_scheme: "viridis"
+
+# Logging
+logging:
+  level: "INFO"
+  log_to_file: true
+  log_path: "projects/NDB_XXX_diabetes_unemployment/analysis/logs"
+
+# Reproducibility
+reproducibility:
+  random_seed: 42
+
+# Research Hypothesis
+research_hypothesis:
+  main_hypothesis: |
+    失業率が高い地域では、経済的ストレス・生活習慣の悪化・医療アクセス低下を介して
+    2型糖尿病有病率（HbA1c高値割合・糖尿病用剤処方量）が高い。
+    高齢化率・所得水準を調整した後も、失業率と糖尿病有病率の正の関連が維持される。
+
+  expected_relationships:
+    - "失業率 ↑ → HbA1c高値率 ↑ (正の相関)"
+    - "失業率 ↑ → 糖尿病用剤処方量 ↑ または ↓（医療アクセス低下で処方減）"
+    - "高齢化率・所得調整後も関連が維持される"
