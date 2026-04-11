@@ -1,3 +1,5 @@
+﻿> **正本リポジトリ（GitHub Private）：** https://github.com/haruki00430/NDB_XXX_diabetes_unemployment
+
 # NDB_XXX_diabetes_unemployment
 
 失業率等と糖尿病関連指標の地域関連（NDB オープンデータ＋ e-Stat 等）。
