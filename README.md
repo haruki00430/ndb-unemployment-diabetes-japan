@@ -9,7 +9,7 @@
 
 **Manuscript status**: Under review at *Primary Care Diabetes* (2026-06-27 submission)  
 **Repository:** https://github.com/haruki00430/ndb-unemployment-diabetes-japan  
-**Zenodo DOI:** *to be assigned upon release*
+**Zenodo DOI:** https://doi.org/10.5281/zenodo.20949288
 
 ---
 
@@ -123,7 +123,7 @@ Saito H, Ohira T. Not All Social Determinants Travel: A Prefectural Ecological
 Analysis of Unemployment Rate and Diabetes Prevalence in Japan.
 Primary Care Diabetes (under review, 2026).
 GitHub: https://github.com/haruki00430/ndb-unemployment-diabetes-japan
-Zenodo DOI: [to be assigned]
+Zenodo DOI: https://doi.org/10.5281/zenodo.20949288
 ```
 
 See also [`CITATION.cff`](CITATION.cff) for machine-readable metadata.

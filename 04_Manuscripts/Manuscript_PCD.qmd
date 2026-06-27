@@ -200,7 +200,7 @@ The authors utilized Japan's NDB Open Data (10th edition), publicly provided by 
 
 ## Data Availability
 
-The NDB Open Data used in this study are publicly available at: <https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000177182.html>. The unemployment rate data are available from the Statistics Bureau of Japan Labour Force Survey at: <https://www.stat.go.jp/data/roudou/pref/index.html>. Analysis scripts and the integrated dataset are archived on GitHub (<https://github.com/haruki00430/NDB_XXX_diabetes_unemployment>) and on Zenodo (DOI to be assigned upon repository release).
+The NDB Open Data used in this study are publicly available at: <https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000177182.html>. The unemployment rate data are available from the Statistics Bureau of Japan Labour Force Survey at: <https://www.stat.go.jp/data/roudou/pref/index.html>. Analysis scripts and the integrated dataset are archived on GitHub (<https://github.com/haruki00430/NDB_XXX_diabetes_unemployment>) and on Zenodo (https://doi.org/10.5281/zenodo.20949288).
 
 ---
 

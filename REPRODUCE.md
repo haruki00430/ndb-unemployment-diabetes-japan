@@ -3,7 +3,7 @@
 **Project:** `ndb-unemployment-diabetes-japan`  
 **Manuscript:** *Not All Social Determinants Travel: A Prefectural Ecological Analysis of Unemployment Rate and Diabetes Prevalence in Japan*  
 **Repository:** https://github.com/haruki00430/ndb-unemployment-diabetes-japan  
-**Zenodo DOI:** `10.5281/zenodo.XXXXXXX` — *replace before public release*
+**Zenodo DOI:** `10.5281/zenodo.20949288` — *replace before public release*
 
 This guide describes how to reproduce the **prefecture-level aggregated analysis (N = 47)** reported in the manuscript.  
 本書は論文に報告した **47都道府県の集計解析** を再現する手順です。
@@ -134,7 +134,7 @@ quarto render 04_Manuscripts/Manuscript_PCD.qmd --to docx
 1. Pass pre-release checklist (see `04_Manuscripts/submission_package_PCD/submission_workflow_PCD.md`)
 2. Tag `v1.0.0` on GitHub after confirming no secrets/raw NDB in tracked files
 3. Enable **Zenodo–GitHub integration** at https://zenodo.org/account/settings/github/
-4. Replace `10.5281/zenodo.XXXXXXX` in this file and in manuscript Data Availability section
+4. Replace `10.5281/zenodo.20949288` in this file and in manuscript Data Availability section
 5. Publish Zenodo record (may follow journal acceptance per MHLW policy)
 
 ---
