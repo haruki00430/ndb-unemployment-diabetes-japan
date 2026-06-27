@@ -1,18 +1,147 @@
-﻿> **正本リポジトリ（GitHub Private）：** https://github.com/haruki00430/NDB_XXX_diabetes_unemployment
+> **正本リポジトリ (GitHub):** https://github.com/haruki00430/NDB_XXX_diabetes_unemployment  
+> **再現・公開:** [`REPRODUCE.md`](REPRODUCE.md) · [`DATA_SOURCES.md`](DATA_SOURCES.md) · [`analysis/README.md`](analysis/README.md) · [`CITATION.cff`](CITATION.cff)
 
-# NDB_XXX_diabetes_unemployment
+# Not All Social Determinants Travel
 
-失業率等と糖尿病関連指標の地域関連（NDB オープンデータ＋ e-Stat 等）。
+## Unemployment Rate and Diabetes Prevalence in Japan — Prefecture-Level Ecological Analysis
 
-## ステータス（2026-04-05 リポジトリ照合）
+**論文タイトル（日本語）**: 失業率は糖尿病指標の地域差を予測しない——社会的決定因の文脈依存性：全国47都道府県の生態学的研究
 
-- **原稿**: `04_Manuscripts/Manuscript_diabetes_unemployment.qmd`（HTML 出力あり）
-- **参考文献**: ルート `references.bib`、同 `vancouver.csl`
-- **解析**: `analysis/01_fetch_unemployment_data.py`〜`04_insert_figures.py`、`analysis/logs/` にログ
-- **結果**: `results/` に回帰・モデル適合等
-- **設定**: `config/config.yaml`
-- プロジェクト直下に README が無かったため新設。
+**Manuscript status**: Under review at *Primary Care Diabetes* (2026-06-27 submission)  
+**Repository:** https://github.com/haruki00430/NDB_XXX_diabetes_unemployment  
+**Zenodo DOI:** *to be assigned upon release*
 
-## 注意
+---
 
-- NDB 生データは読取専用。実データを外部 AI に送信しない（`CLAUDE.md` 準拠）。
+## Abstract / 研究概要
+
+We conducted a prefecture-level ecological study to examine whether regional unemployment rates predict diabetes prevalence across Japan's 47 prefectures. Using NDB Open Data (10th edition, FY2022 health checkups), we found that unemployment rate showed virtually no ecological association with the proportion of residents with HbA1c ≥ 6.5% (Pearson r = −0.016, p = 0.916), robust across six OLS model specifications. By contrast, per-capita prefectural income was a strong inverse predictor (r = −0.570, p < 0.001). These findings suggest that social determinants of diabetes may not transfer universally across different socioeconomic and institutional contexts.
+
+失業率と都道府県別HbA1c高値割合の間に有意な関連は認められなかった（r = −0.016, p = 0.916）。一方、1人当たり県民所得は強い逆相関を示した（r = −0.570, p < 0.001）。社会的決定因の予測力は制度・労働市場の文脈に依存することを示唆する。
+
+---
+
+## Repository structure / リポジトリ構造
+
+```
+NDB_XXX_diabetes_unemployment/
+├── analysis/                  # Analysis scripts (01–04) / 解析スクリプト
+│   ├── README.md              # Script guide / スクリプト解説
+│   ├── 01_fetch_unemployment_data.py
+│   ├── 02_regression_analysis.py
+│   ├── 03_visualization.py
+│   └── 04_insert_figures.py
+├── config/
+│   └── config.yaml            # Project settings / プロジェクト設定
+├── data/
+│   └── release/               # Public aggregated data (N = 47) / 公開集計データ
+│       ├── analysis_dataset_prefecture_n47.csv
+│       └── README.md          # Column dictionary / 変数辞書
+├── results/
+│   └── figures/               # Output figures (PNG, 300 dpi)
+├── 04_Manuscripts/
+│   ├── Not_All_Social_Determinants_Travel_20260627.docx  # Submission DOCX
+│   ├── Manuscript_PCD.qmd     # Quarto source (PCD-specific)
+│   └── submission_package_PCD/
+├── references.bib             # BibTeX references
+├── vancouver.csl              # Citation style
+├── REPRODUCE.md               # Reproduction guide / 再現手順書
+├── DATA_SOURCES.md            # Data download instructions / データ取得先
+├── CITATION.cff               # Machine-readable citation
+├── LICENSE                    # MIT (code)
+├── LICENSE-DATA               # CC BY 4.0 (data/release/)
+└── requirements.txt           # Python dependencies
+```
+
+---
+
+## Quick start / クイックスタート
+
+```bash
+git clone https://github.com/haruki00430/NDB_XXX_diabetes_unemployment.git
+cd NDB_XXX_diabetes_unemployment
+
+python -m venv .venv
+# Windows:
+.venv\Scripts\activate
+# macOS/Linux:
+source .venv/bin/activate
+
+pip install -r requirements.txt
+```
+
+### Minimal reproduction (no NDB download required) / 最小再現（NDBダウンロード不要）
+
+```bash
+# Uses data/release/analysis_dataset_prefecture_n47.csv
+python analysis/02_regression_analysis.py
+python analysis/03_visualization.py
+```
+
+For full pipeline instructions, see **[REPRODUCE.md](REPRODUCE.md)**.
+
+---
+
+## Data sources / データソース
+
+| Source | Description | URL |
+|--------|-------------|-----|
+| NDB Open Data (10th edition) | HbA1c, antidiabetic drug prescriptions | https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000177182.html |
+| Statistics Bureau Labour Force Survey | Prefecture-level unemployment rate 2022 | https://www.stat.go.jp/data/roudou/pref/index.html |
+| e-Stat / 2020 Population Census | Aging rate, population density | https://www.e-stat.go.jp/ |
+| Cabinet Office Prefectural Income | Per-capita prefectural income FY2022 | https://www.esri.cao.go.jp/jp/sna/data/data_list/kenmin/ |
+
+**NDB raw Excel files are NOT included** in this repository (MHLW redistribution terms). See [DATA_SOURCES.md](DATA_SOURCES.md) for download instructions.
+
+---
+
+## Key results / 主要結果
+
+| Indicator | Pearson r | p value |
+|-----------|-----------|---------|
+| Unemployment rate × HbA1c high rate | −0.016 | 0.916 |
+| Per-capita income × HbA1c high rate | −0.570 | <0.001 |
+| Unemployment: OLS β (6 models) | all near 0 | all ≥ 0.495 |
+
+---
+
+## Authors / 著者
+
+| Name | Affiliation | ORCID |
+|------|-------------|-------|
+| **Haruki Saito** (Corresponding) | Department of Epidemiology, Fukushima Medical University School of Medicine | [0009-0009-7890-6068](https://orcid.org/0009-0009-7890-6068) |
+| Tetsuya Ohira | Department of Epidemiology, Fukushima Medical University School of Medicine | [0000-0003-4532-7165](https://orcid.org/0000-0003-4532-7165) |
+
+---
+
+## Citation / 引用
+
+If you use this code or data, please cite:
+
+```
+Saito H, Ohira T. Not All Social Determinants Travel: A Prefectural Ecological 
+Analysis of Unemployment Rate and Diabetes Prevalence in Japan.
+Primary Care Diabetes (under review, 2026).
+GitHub: https://github.com/haruki00430/NDB_XXX_diabetes_unemployment
+Zenodo DOI: [to be assigned]
+```
+
+See also [`CITATION.cff`](CITATION.cff) for machine-readable metadata.
+
+---
+
+## License / ライセンス
+
+- **Code** (`analysis/`, `config/`, scripts): [MIT License](LICENSE)
+- **Aggregated data** (`data/release/`): [CC BY 4.0](LICENSE-DATA)
+- **NDB raw data**: Not included; subject to MHLW portal terms
+
+---
+
+## Notes / 注意事項
+
+- NDB生データは本リポジトリに含まれていません（厚生労働省利用規約上の再配布禁止）
+- 公開集計データ（`data/release/`）のみ CC BY 4.0 で公開
+- 個人識別可能なデータは一切含まれていません
+
+**Last updated**: 2026-06-27

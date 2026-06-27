@@ -1,0 +1,51 @@
+# Citation metadata for GitHub + Zenodo (update version/doi/date-released at public release)
+cff-version: 1.2.0
+message: "If you use this code or the deposited prefecture-level dataset, please cite as below."
+type: software
+title: "Not All Social Determinants Travel: Replication Code and Prefecture-Level Dataset (NDB Open Data, Japan)"
+version: 1.0.0
+date-released: 2026-06-27
+license: MIT
+url: "https://github.com/haruki00430/NDB_XXX_diabetes_unemployment"
+repository-code: "https://github.com/haruki00430/NDB_XXX_diabetes_unemployment"
+doi: 10.5281/zenodo.XXXXXXX
+abstract: >-
+  Reproducible code and prefecture-level aggregated data (N = 47) for an
+  ecological study examining the relationship between regional unemployment
+  rate and diabetes prevalence (HbA1c high rate) across Japan's 47 prefectures,
+  using NDB Open Data 10th edition (FY2022 health checkups, FY2023 medical claims),
+  Labour Force Survey, 2020 Population Census, and prefectural income statistics.
+  The primary finding is a null association between unemployment rate and HbA1c
+  high rate (r = −0.016), contrasted with a strong inverse association for
+  per-capita prefectural income (r = −0.570).
+keywords:
+  - diabetes
+  - social determinants of health
+  - unemployment
+  - ecological study
+  - NDB Open Data
+  - Japan
+  - HbA1c
+  - reproducibility
+authors:
+  - family-names: Saito
+    given-names: Haruki
+    affiliation: "Department of Epidemiology, Fukushima Medical University School of Medicine"
+    orcid: "https://orcid.org/0009-0009-7890-6068"
+    email: haruki00430@gmail.com
+  - family-names: Ohira
+    given-names: Tetsuya
+    affiliation: "Department of Epidemiology, Fukushima Medical University School of Medicine"
+    orcid: "https://orcid.org/0000-0003-4532-7165"
+preferred-citation:
+  type: article
+  title: "Not All Social Determinants Travel: A Prefectural Ecological Analysis of Unemployment Rate and Diabetes Prevalence in Japan"
+  authors:
+    - family-names: Saito
+      given-names: Haruki
+    - family-names: Ohira
+      given-names: Tetsuya
+  journal: "Primary Care Diabetes"
+  year: 2026
+  notes: "Manuscript under review; update journal volume/pages and DOI when published."
+  doi: 10.5281/zenodo.XXXXXXX

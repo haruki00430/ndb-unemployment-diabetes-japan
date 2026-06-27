@@ -18,11 +18,17 @@ ENV/
 
 02_Data/raw/
 02_Data/processed/
-*.csv
 *.xlsx
 *.parquet
 *.sqlite
 *.db
+
+# Exclude most CSVs (NDB intermediate data) but track public release files
+*.csv
+!data/release/
+!data/release/**
+!data/release/*.csv
+!data/release/*.md
 
 *.log
 05_Outputs/figures/

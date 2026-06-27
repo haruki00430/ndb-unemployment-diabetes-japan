@@ -1,5 +1,10 @@
 """
-Phase 4: DOCXに図を挿入
+Phase 4: Insert figures into manuscript DOCX.
+
+Locates Figure legend paragraphs in a DOCX file and inserts the corresponding
+PNG files (from results/figures/en/) immediately after each legend.
+
+Phase 4: 原稿DOCXのFigureレジェンド段落直後に図PNGを挿入するユーティリティ。
 """
 import sys
 from pathlib import Path

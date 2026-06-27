@@ -1,9 +1,16 @@
 """
-Phase 3: 可視化（4枚の図表）
-1. 散布図: 失業率 × HbA1c高値率（回帰直線・95%CI）
-2. 散布図: 失業率 × 糖尿病用剤処方量
-3. Forest plot: 感度分析 regression coefficients
-4. Choropleth: 失業率・HbA1c高値率の都道府県分布
+Phase 3: Generate main figures with Japanese labels.
+
+Produces four main figures reported in the manuscript (300 dpi PNG):
+  Fig 1: Scatter plot — unemployment rate × HbA1c high rate (with regression line)
+  Fig 2: Scatter plot — unemployment rate × antidiabetic drug prescriptions
+  Fig 3: Forest plot — unemployment rate β across six sensitivity analysis models
+  Fig 4: Prefecture ranking chart — HbA1c high rate and unemployment rate
+
+Phase 3: 日本語ラベルで主要図を生成する（300dpi PNG）。
+国際誌投稿用英語版は 03_visualization_english.py を参照。
+
+Output directory: results/figures/
 """
 
 import sys

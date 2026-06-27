@@ -1,7 +1,15 @@
 """
-Phase 1: 都道府県別失業率データの取得
-e-Stat 労働力調査（2022年）から都道府県別完全失業率を取得し、
-diabetes_sesの既存データセットと統合する。
+Phase 1: Fetch prefecture-level unemployment data and build integrated dataset.
+
+Retrieves complete unemployment rates (2022 annual) from the Statistics Bureau
+Labour Force Survey and merges them with HbA1c checkup results and antidiabetic
+drug prescriptions from NDB Open Data 10th edition to produce the analysis dataset.
+
+Phase 1: 都道府県別失業率データの取得とデータセット構築。
+総務省統計局「労働力調査 都道府県別結果（2022年平均）」から完全失業率を取得し、
+NDB Open Dataの特定健診HbA1c結果・抗糖尿病薬処方データと統合する。
+
+Output: data/interim/analysis_dataset_with_unemployment.csv (N = 47)
 """
 
 import sys

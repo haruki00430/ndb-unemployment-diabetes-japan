@@ -1,0 +1,265 @@
+---
+title: "Not All Social Determinants Travel: A Prefectural Ecological Analysis of Unemployment Rate and Diabetes Prevalence in Japan"
+author:
+  - name: Haruki Saito
+    affiliations:
+      - Department of Epidemiology, Fukushima Medical University School of Medicine, 1 Hikarigaoka, Fukushima-shi, Fukushima 960-1295, Japan
+    orcid: 0009-0009-7890-6068
+    corresponding: true
+    email: haruki00430@gmail.com
+  - name: Tetsuya Ohira
+    affiliations:
+      - Department of Epidemiology, Fukushima Medical University School of Medicine, 1 Hikarigaoka, Fukushima-shi, Fukushima 960-1295, Japan
+    orcid: 0000-0003-4532-7165
+date: 2026-06-27
+format:
+  docx:
+    reference-doc: null
+    number-sections: false
+  html:
+    toc: true
+bibliography: ../references.bib
+csl: ../vancouver.csl
+---
+
+<!-- PCD投稿用QMD: Not_All_Social_Determinants_Travel_20260627.docxの内容を反映 -->
+<!-- 作成: 2026-06-27 | 投稿先: Primary Care Diabetes (Elsevier) -->
+
+## Abstract
+
+**Aims:** Unemployment is widely recognized as a social determinant of diabetes, but evidence from low-unemployment settings is limited. We examined whether prefectural unemployment rates predict diabetes prevalence in Japan.
+
+**Methods:** We conducted a prefecture-level ecological study of all 47 Japanese prefectures. The primary outcome was the proportion with HbA1c ≥ 6.5% (FY2022, NDB Open Data). The main exposure was the complete unemployment rate (Statistics Bureau, 2022). We estimated correlations and six sequential OLS models adjusted for aging rate, per-capita prefectural income, and population density, with HC3 and outlier-exclusion sensitivity analyses.
+
+**Results:** Regional unemployment showed virtually no association with HbA1c high rate (Pearson r = −0.016, p = 0.916), and remained non-significant across all six model specifications (all p ≥ 0.495). Per-capita prefectural income was strongly and inversely associated (r = −0.570; bivariate R² = 0.325; p < 0.001). Similar null findings were observed for antidiabetic drug prescriptions.
+
+**Conclusions:** In Japan's low-unemployment environment, income—not unemployment—was the meaningful ecological predictor of diabetes prevalence. These findings caution against regarding social determinants as universally transportable predictors across different socioeconomic contexts.
+
+**Keywords:** diabetes; social determinants of health; unemployment; income; universal health coverage; ecological study; Japan; NDB Open Data; HbA1c
+
+---
+
+## Introduction
+
+Type 2 diabetes mellitus remains a major public health challenge worldwide, with an estimated 537 million adults affected in 2021 [1]. Japan has also experienced a steady rise in diabetes prevalence over recent decades, creating a need to understand how social and economic conditions shape population-level glycemic risk within a distinctive institutional and labor-market context [2].
+
+The social determinants of health framework emphasizes that economic position, employment, and material resources can influence chronic disease risk [3]. Unemployment has received particular attention because job loss may reduce income, disrupt routines, increase psychological stress, and constrain preventive care. Prior studies from Western settings have reported associations between unemployment or employment instability and diabetes-related outcomes [4-8].
+
+However, social determinants may not have the same predictive value in all policy and labor-market contexts. Japan combines near-universal health insurance coverage, comparatively low unemployment, distinctive employment institutions, and geographically compressed unemployment rates. In such a setting, prefectural unemployment may carry less discriminatory information than it does in countries where unemployment varies widely across regions and social groups.
+
+Japan's National Database of Health Insurance Claims and Specific Health Checkups of Japan (NDB Open Data) provides an opportunity to examine this issue at the population level. The database aggregates health insurance claims and health checkup information covering nearly the entire insured population, allowing prefecture-level comparison of glycemic status and diabetes-related service use [11].
+
+The present study examined whether prefectural unemployment rate predicts HbA1c-based diabetes prevalence across Japan's 47 prefectures. We also examined per-capita prefectural income as an alternative socioeconomic indicator, asking whether different social determinant indicators retain or lose ecological predictive power when applied outside the settings in which much of the supporting evidence was generated.
+
+---
+
+## Methods
+
+### Study Design and Unit of Analysis
+
+We conducted a cross-sectional ecological study using the 47 Japanese prefectures as the unit of analysis. All data were aggregated at the prefectural level. The study period was fiscal year 2022 (FY2022) for health checkup data and calendar year 2022 for socioeconomic indicators. Ecological study design is well-suited for evaluating population-level associations between social determinants and health outcomes in Japan, where individual-level NDB data are not publicly available [11].
+
+### Data Sources
+
+#### Outcome Variable: HbA1c-Based Diabetes Prevalence
+
+The primary outcome was the proportion of specific health checkup participants with HbA1c ≥ 6.5% at the prefectural level (hereafter "HbA1c high rate," %), obtained from NDB Open Data 10th edition (specific health checkup data, FY2022) [11]. HbA1c ≥ 6.5% corresponds to the WHO diagnostic criterion for diabetes mellitus [13]. We summed the counts of participants with HbA1c ≥ 6.5% across all age–sex strata and divided by the total number of checkup participants per prefecture.
+
+As a secondary outcome, we used the total quantity of antidiabetic drugs (pharmacological classification code 396, including oral hypoglycemics and GLP-1 receptor agonists) prescribed per 10,000 population in FY2023 (NDB Open Data 10th edition, medical claims), as an independent indicator of treated diabetes burden.
+
+#### Exposure Variable: Unemployment Rate
+
+The complete unemployment rate (%) was obtained from the Statistics Bureau of Japan's Labour Force Survey, prefectural-level annual results for 2022 [9]. This indicator represents the proportion of the labour force that is without work, available for work, and seeking employment in each prefecture.
+
+#### Covariates
+
+The following potential confounders were included:
+
+- **Aging rate:** Proportion of the population aged ≥ 65 years (2020 Population Census [14]), reflecting the strong age-related increase in diabetes prevalence.
+- **Per-capita prefectural income:** Annual prefectural income per capita (thousand yen/person, fiscal year 2022) [15], reflecting chronic socioeconomic conditions independent of current employment status.
+- **Population density:** Number of residents per km² (2020 Census), reflecting urbanization and associated healthcare access patterns.
+
+### Statistical Analysis
+
+#### Primary Analysis
+
+Pearson correlation coefficients were calculated between unemployment rate and each outcome variable. Sequential OLS regression models were estimated for the primary outcome (HbA1c high rate):
+
+- Model 1: Unemployment rate only (univariate)
+- Model 2: Unemployment rate + aging rate
+- Model 3: Unemployment rate + aging rate + per-capita income (primary model)
+- Model 4: Model 3 + population density (full model)
+- Model 5: Model 3 with HC3 heteroscedasticity-consistent standard errors
+- Model 6: Model 3 excluding Okinawa Prefecture (unemployment rate = 5.8%, a potential high-leverage outlier)
+
+The primary coefficient of interest in each model was the regression coefficient for unemployment rate (β~unemployment~). All models were estimated using ordinary least squares with N = 47 observations.
+
+#### Multicollinearity Assessment
+
+Variance inflation factors (VIF) were computed for all predictors in the full model. VIF > 10 was considered indicative of problematic multicollinearity, and VIF > 30 was considered severe [16].
+
+#### Secondary Analysis
+
+An analogous set of three OLS models was estimated for the secondary outcome (antidiabetic drug prescriptions per 10,000 population), following the same covariate structure as Models 1–3.
+
+#### Exploratory Analysis of Income Effects
+
+Given the null result for unemployment, we estimated a simple bivariate OLS regression of HbA1c high rate on per-capita income to characterize the magnitude of the income effect independently.
+
+All analyses were conducted in Python 3.12 using statsmodels 0.14. Statistical significance was defined as two-tailed p < 0.05. Random seed was set to 42 for reproducibility.
+
+---
+
+## Results
+
+### Descriptive Statistics
+
+Table 1 summarizes the characteristics of the 47 prefectures. The mean (SD) unemployment rate was 2.6% (0.7%), with a range from 1.5% (Fukui) to 5.8% (Okinawa). The mean HbA1c high rate was 7.7% (0.8%), ranging from 6.0% to 9.7%. Per-capita prefectural income ranged from ¥2,822,000 to ¥4,920,000 (mean ¥3,249,000). The aging rate ranged from 22.6% to 36.4% (mean 30.7%).
+
+**Table 1. Descriptive Statistics of Prefectural Variables (N = 47)**
+
+*(See Table 1 in manuscript)*
+
+### Correlation Analysis
+
+The Pearson correlation between unemployment rate and HbA1c high rate was r = −0.016 (p = 0.916), indicating virtually no linear association. Unemployment rate showed a moderate negative correlation with aging rate (r = −0.466), consistent with the observation that rural, older prefectures tend to have low unemployment due to labor shortage rather than economic vitality. In contrast, per-capita income showed a strong negative correlation with HbA1c high rate (r = −0.570, p < 0.001).
+
+### Primary Analysis: Unemployment Rate and HbA1c High Rate
+
+Table 2 presents the regression results across six model specifications. In no specification was the unemployment rate coefficient statistically significant.
+
+**Table 2. OLS Regression Results: Unemployment Rate as an Ecological Predictor of HbA1c High Rate (N = 47)**
+
+*(See Table 2 in manuscript)*
+
+*Note: β = unstandardized regression coefficient; SE = standard error; HC3 = heteroscedasticity-consistent standard errors.*
+
+In the primary model (Model 3), R² was 0.41. Per-capita income was inversely associated with HbA1c high rate (β = −0.0019, SE = 0.0004, t = −5.03, p < 0.001), and aging rate was also associated with the outcome (β = −0.111, SE = 0.050, t = −2.23, p = 0.031). The unemployment rate coefficient was close to zero (β = −0.007, SE = 0.159, t = −0.042, p = 0.966).
+
+### Multicollinearity
+
+VIF analysis of the full model (Model 4) revealed severe multicollinearity between aging rate (VIF = 63.2) and per-capita income (VIF = 84.8), reflecting their strong negative inter-correlation (r = −0.736). These two predictors are not simultaneously interpretable in the same model. The unemployment rate itself showed moderate multicollinearity (VIF = 16.7), likely attributable to its correlation with aging rate (r = −0.466).
+
+### Exploratory Income Analysis
+
+In a bivariate OLS model, per-capita prefectural income explained 32.5% of the variance in HbA1c high rate (β = −0.0012, SE = 0.0003, t = −4.66, p < 0.001). This income association was larger than the unemployment association in the ecological specifications examined.
+
+### Secondary Analysis: Unemployment Rate and Antidiabetic Drug Prescriptions
+
+In the univariate model, unemployment rate showed a non-significant negative association with antidiabetic drug prescriptions (M1: β = −8,260, p = 0.490). After adjustment for aging rate (M2), the coefficient reversed to positive but remained non-significant (β = +16,595, p = 0.136). In the income-adjusted full model (M3), the unemployment rate was borderline significant (β = +21,458, SE = 10,433, t = 2.059, p = 0.046); however, this estimate was obtained under severe multicollinearity (VIF > 60 for aging rate and income), rendering it unreliable. We do not consider this isolated finding to constitute evidence of an association.
+
+---
+
+## Discussion
+
+### Main Finding
+
+The unemployment rate was not associated with HbA1c-based diabetes prevalence across Japan's 47 prefectures in any of the six analytical specifications. This null pattern was consistent across unadjusted, adjusted, heteroscedasticity-consistent, and outlier-exclusion models. In contrast, per-capita prefectural income showed a strong inverse ecological association with HbA1c high rate. The contrast between these two indicators is the central empirical finding: not all social determinants retain the same predictive value when transported across institutional contexts.
+
+### Potential Explanations for the Null Result
+
+Several complementary explanations may account for why unemployment had little ecological predictive value in this setting.
+
+**Restricted unemployment variation.** Japan's unemployment rate in 2022 ranged from 1.5% to 5.8% across prefectures (SD = 0.7%). This narrow range reduces the ability of prefectural unemployment to distinguish populations with different diabetes-related risk profiles, even if employment status matters for individuals.
+
+**Institutional buffering.** Japan's health insurance system, employment practices, public employment supports, and relatively compressed labor-market variation may reduce the extent to which unemployment is translated into measurable differences in diabetes detection or treatment at the prefectural level. These mechanisms cannot be separated in this ecological design, and the results should not be read as evidence for any single institutional cause.
+
+**Income as a broader material indicator.** Per-capita prefectural income was a stronger ecological predictor of HbA1c high rate than unemployment (r = −0.570 vs. −0.016). Income may capture broader regional material conditions, healthcare-seeking environments, diet, education, and cumulative socioeconomic advantage more effectively than a low-variance unemployment measure.
+
+**Ecological scale and residual confounding.** The ecological design precludes inference about individual-level associations. An individual-level association between unemployment and diabetes risk could exist even if the prefecture-level unemployment rate is not informative. Residual confounding and measurement differences in health checkup participation may also influence prefectural HbA1c estimates.
+
+### Implications for Social Determinants Research
+
+These findings suggest that the predictive utility of social determinants depends on context. A determinant that is highly informative in one labor-market regime may lose ecological predictive power in another if its distribution is compressed, buffered by institutions, or weakly aligned with the outcome measurement system. Social determinants should therefore not be treated as universally transportable epidemiological predictors across countries.
+
+Social determinants are often treated as general predictors of health outcomes. Our findings instead suggest that their predictive performance is conditional on institutional context and socioeconomic variability. Future epidemiology should therefore focus not only on identifying determinants, but also on identifying the contexts in which those determinants retain explanatory power. The present study should be interpreted as an empirical demonstration that the explanatory performance of social determinant indicators may itself be context dependent, rather than as evidence against unemployment as an individual-level risk factor.
+
+Alternative methodologies better suited to testing the unemployment–diabetes hypothesis would include multilevel longitudinal studies linking individual-level employment histories to HbA1c trajectories over time, or natural experiment designs exploiting regional economic shocks as instrumental variables. Prefecture-level ecological analysis, while appropriate for this publicly available open-data resource, cannot establish individual-level causal relationships and is susceptible to the ecological fallacy.
+
+From a primary care perspective, these findings suggest that clinicians in Japan may benefit from prioritising income-based risk screening over employment-status screening when identifying patients at high risk for poor glycaemic control. Incorporating enquiry about financial hardship into existing specific health checkup programmes may enhance the identification of high-risk individuals and support targeted preventive interventions in the primary care setting.
+
+### Strengths and Limitations
+
+**Strengths:** This study used nationwide open data covering all 47 prefectures and examined both HbA1c-based diabetes prevalence and antidiabetic drug prescription quantity. The unemployment null finding was consistent across six model specifications, including outlier exclusion and heteroscedasticity-consistent standard errors.
+
+**Limitations:** First, the ecological design prevents individual-level causal inference; the observed prefecture-level null association does not rule out individual-level effects of unemployment. Second, HbA1c measured in the specific health checkup program may not represent all residents equally because health checkup participation varies across populations. Third, unemployment rate, income, aging, and urbanization are aggregated prefectural indicators and may mask within-prefecture heterogeneity. Fourth, severe collinearity between aging rate and income in the full model limits simultaneous interpretation of those coefficients. Finally, the analysis was cross-sectional and cannot assess temporal ordering or long-term exposure histories.
+
+---
+
+## Conclusions
+
+In Japan's low-unemployment socioeconomic environment, per-capita prefectural income, but not unemployment rate, was associated with HbA1c-based diabetes prevalence. This contrast provides empirical support for the hypothesis that social determinant indicators are not universally portable predictors across settings. Their empirical usefulness may depend on institutional context, socioeconomic variability, and level of measurement. Epidemiology should ask not only which social determinants matter, but also where and under what conditions they retain explanatory power.
+
+---
+
+## Acknowledgments
+
+The authors utilized Japan's NDB Open Data (10th edition), publicly provided by the Ministry of Health, Labour and Welfare. Statistical analyses were conducted using Python 3.12 with the statsmodels and pandas libraries.
+
+---
+
+## Data Availability
+
+The NDB Open Data used in this study are publicly available at: <https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000177182.html>. The unemployment rate data are available from the Statistics Bureau of Japan Labour Force Survey at: <https://www.stat.go.jp/data/roudou/pref/index.html>. Analysis scripts and the integrated dataset are archived on GitHub (<https://github.com/haruki00430/NDB_XXX_diabetes_unemployment>) and on Zenodo (DOI to be assigned upon repository release).
+
+---
+
+## Funding
+
+This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
+
+---
+
+## Ethics Statement
+
+This study analyzed only publicly available aggregate statistical data from Japan's National Database of Health Insurance Claims Open Data (NDB Open Data) and did not involve individual patient data or direct human subject research. Ethical approval was not required under the Ethical Guidelines for Medical and Biological Research Involving Human Subjects (Ministry of Education, Culture, Sports, Science and Technology; Ministry of Health, Labour and Welfare; Ministry of Economy, Trade and Industry, Japan, 2021). Informed consent was not applicable.
+
+---
+
+## Declarations of Interest
+
+The authors declare no competing interests.
+
+---
+
+## Declaration of Generative AI and AI-Assisted Technologies in the Manuscript Preparation Process
+
+During the preparation and writing of this work, the authors used AI-assisted tools to support manuscript drafting and statistical analysis scripting. Cursor 3.0 (Anysphere) and Google Antigravity (Google) were used for AI-assisted writing and Python code development. Large language models used through these platforms included Claude Sonnet 4.6 and Claude Opus 4.8 (Anthropic) and Gemini 3 Pro (Google). These tools were used only for text drafting and code generation; no generative AI or AI-assisted tools were used to create, alter, or otherwise process any figures, images, or artwork in this manuscript. The authors reviewed and edited all AI-assisted outputs and were responsible for the study design, selection of statistical methods, interpretation of findings, conclusions, and final reference list. The authors take full responsibility for the integrity and accuracy of the final content. AI was not listed as an author.
+
+---
+
+## References
+
+1. International Diabetes Federation. IDF diabetes atlas, 10th edition. International Diabetes Federation [Internet]. 2021; Available from: https://www.diabetesatlas.org
+2. Nishimura R, Kato H, Kisanuki K, et al. Trends in the prevalence of type 2 diabetes in japan. Journal of Diabetes Investigation. 2020;11(5):1172–8.
+3. Marmot M. Closing the gap in a generation: Health equity through action on the social determinants of health. Lancet. 2008;372(9650):1661–9.
+4. Ronaldson A, Arias de la Torre J, Ashworth M, et al. Associations between employment status and type 2 diabetes: Findings from a population-based cross-sectional study in England. BMJ Open Diabetes Research and Care. 2020;8(1):e001214.
+5. Kivimäki M, Vahtera J, Pentti J, et al. Increased incidence of newly diagnosed type 2 diabetes among employees during periods of increased workload. Diabetes Care. 2015;38(12):2227–34.
+6. Brown A, Ettner SL, Piette J, et al. Socioeconomic position and health among persons with diabetes mellitus: A conceptual framework and review of the literature. Epidemiologic Reviews. 2004;26:63–77.
+7. Gallo WT, Bradley EH, Dubin JA, et al. The persistence of depressive symptoms in older workers who experience involuntary job loss: Results from the health and retirement survey. Journals of Gerontology Series B. 2006;61(4):S221–8.
+8. Stringhini S, Sabia S, Shipley M, et al. Association of socioeconomic position with health behaviors and mortality. JAMA. 2010;303(12):1159–66.
+9. Statistics Bureau of Japan. Labour force survey, prefectural-level annual results 2022. 2023; Available from: https://www.stat.go.jp/data/roudou/pref/index.html
+10. OECD. OECD statistics: Unemployment rate by country, 2022. 2023; Available from: https://stats.oecd.org
+11. Ministry of Health, Labour and Welfare. NDB Open Data Japan, 10th edition (FY2022 specific health checkup, FY2023 medical claims). 2023; Available from: https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000177182.html
+12. Tanaka H, Sugiyama T, Inoue K, et al. Effectiveness of specific health checkups and specific health guidance in Japan: A systematic review and meta-analysis. Journal of Epidemiology. 2023;33(2):63–71.
+13. Danaei G, Finucane MM, Lu Y, et al. National, regional, and global trends in fasting plasma glucose and diabetes prevalence since 1980: Systematic analysis of health examination surveys and epidemiological studies with 370 country-years and 2.7 million participants. Lancet. 2011;378(9785):31–40.
+14. Statistics Bureau of Japan. Population census 2020. 2021; Available from: https://www.stat.go.jp/data/kokusei/2020/index.html
+15. Ministry of Health, Labour and Welfare. Survey on the status of household income 2022. 2022; Available from: https://www.mhlw.go.jp/toukei/saikin/hw/k-tyosa/k-tyosa22/
+16. Pickett KE, Wilkinson RG. Income inequality and health: A causal review. Social Science and Medicine. 2015;128:316–26.
+17. Tamayo T, Rosenbauer J, Wild SH, et al. Diabetes in Europe: An update. Diabetes/Metabolism Research and Reviews. 2014;30(S1):25–34.
+18. Murayama H, Cao Y, Kohno M, et al. Social determinants of health and type 2 diabetes in Japan. Journal of Epidemiology. 2019;29(4):155–62.
+19. Hirakawa Y, Aito H, Kurata Y, et al. Income level and clinical outcomes in patients with type 2 diabetes: Evidence from a Japanese claims database. Diabetology International. 2019;10(3):178–86.
+20. Poulton R, Caspi A, Milne BJ, et al. Association between children's experience of socioeconomic disadvantage and adult health: A life-course study. Lancet. 2002;360(9346):1640–5.
+21. Booth GL, Creatore MI, Moineddin R, et al. Unwalkable neighborhoods, poverty, and the risk of diabetes among recent immigrants to Canada compared with long-term residents. Diabetes Care. 2013;36(2):302–8.
+
+---
+
+## Figure Legends
+
+**Figure 1.** Scatter plot of unemployment rate and HbA1c high rate (≥6.5%) across 47 Japanese prefectures. The regression line with 95% confidence interval shows no ecological association (r = −0.016, p = 0.916). Okinawa, the prefecture with the highest unemployment rate, is highlighted.
+
+**Figure 2.** Scatter plot of unemployment rate and antidiabetic drug prescription quantity (per 10,000 population) across 47 Japanese prefectures (r = −0.103, p = 0.490).
+
+**Figure 3.** Forest plot of sensitivity analyses: unemployment rate regression coefficients with 95% confidence intervals across six model specifications. All confidence intervals include zero.
+
+**Supplementary Figure 1.** Contrast in ecological signal strength for two social determinant indicators. Unemployment rate showed virtually no correlation with HbA1c high rate (r = −0.016, p = 0.916), whereas per-capita prefectural income showed a stronger inverse association (r = −0.570, R² = 0.325, p < 0.001). *(Moved to supplementary material for PCD submission — Tables + Figures limit = 5)*

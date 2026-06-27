@@ -1,0 +1,15 @@
+Highlights (Primary Care Diabetes – MANDATORY, max 85 characters per bullet)
+
+• Ecological study of 47 Japanese prefectures examined unemployment and diabetes.
+• Unemployment rate showed no association with HbA1c ≥ 6.5% (r = −0.016, p = 0.916).
+• Null findings were robust across all six sensitivity analysis specifications.
+• Per-capita income was a strong inverse predictor (r = −0.570, p < 0.001).
+• Social determinants of diabetes may not transfer across socioeconomic contexts.
+
+---
+Character counts (including leading "• " and spaces):
+1: 80 chars ✓
+2: 85 chars ✓
+3: 70 chars ✓
+4: 68 chars ✓
+5: 83 chars ✓

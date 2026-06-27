@@ -1,10 +1,27 @@
 """
-Phase 2: OLS回帰分析（失業率 → 糖尿病有病率）
-- Model 1: 単変量（失業率のみ）
-- Model 2: 高齢化率調整
-- Model 3: 高齢化率 + 所得調整
-- Model 4: 高齢化率 + 所得 + 人口密度（フルモデル）
-感度分析: HC3頑健標準誤差、外れ値除外（沖縄）、対数変換
+Phase 2: OLS regression analysis — unemployment rate and diabetes prevalence.
+
+Estimates six sequential OLS models with HbA1c high rate (≥6.5%) as primary
+outcome and unemployment rate as main exposure. Sensitivity analyses include
+HC3 heteroscedasticity-consistent standard errors (Model 5) and outlier
+exclusion of Okinawa (Model 6). Secondary analysis uses antidiabetic drug
+prescriptions per 10,000 population as outcome.
+
+Phase 2: OLS回帰分析（失業率 → 糖尿病有病率）。
+HbA1c高値割合（≥6.5%）を主要アウトカムとした6モデルのOLS回帰。
+感度分析: HC3頑健標準誤差（Model 5）、沖縄除外（Model 6）。
+
+Models:
+  Model 1: Unemployment rate only (univariate)
+  Model 2: + Aging rate
+  Model 3: + Aging rate + Per-capita income (primary model)
+  Model 4: + Aging rate + Per-capita income + Population density (full model)
+  Model 5: Model 3 with HC3 robust standard errors
+  Model 6: Model 3 excluding Okinawa (high-unemployment outlier)
+
+Outputs:
+  results/regression_coefficients.csv
+  results/model_fit_statistics.csv
 """
 
 import sys
