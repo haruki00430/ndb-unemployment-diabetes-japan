@@ -1,8 +1,8 @@
 # Reproduction Guide / 再現手順書
 
-**Project:** `NDB_XXX_diabetes_unemployment`  
+**Project:** `ndb-unemployment-diabetes-japan`  
 **Manuscript:** *Not All Social Determinants Travel: A Prefectural Ecological Analysis of Unemployment Rate and Diabetes Prevalence in Japan*  
-**Repository:** https://github.com/haruki00430/NDB_XXX_diabetes_unemployment  
+**Repository:** https://github.com/haruki00430/ndb-unemployment-diabetes-japan  
 **Zenodo DOI:** `10.5281/zenodo.XXXXXXX` — *replace before public release*
 
 This guide describes how to reproduce the **prefecture-level aggregated analysis (N = 47)** reported in the manuscript.  
@@ -37,8 +37,8 @@ Under MHLW rules, **individual-level claims and prefecture-level raw NDB Excel c
 ## Step 0: Clone and environment / 環境構築
 
 ```bash
-git clone https://github.com/haruki00430/NDB_XXX_diabetes_unemployment.git
-cd NDB_XXX_diabetes_unemployment
+git clone https://github.com/haruki00430/ndb-unemployment-diabetes-japan.git
+cd ndb-unemployment-diabetes-japan
 
 python -m venv .venv
 # Windows:

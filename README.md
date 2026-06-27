@@ -1,4 +1,4 @@
-> **正本リポジトリ (GitHub):** https://github.com/haruki00430/NDB_XXX_diabetes_unemployment  
+> **正本リポジトリ (GitHub):** https://github.com/haruki00430/ndb-unemployment-diabetes-japan  
 > **再現・公開:** [`REPRODUCE.md`](REPRODUCE.md) · [`DATA_SOURCES.md`](DATA_SOURCES.md) · [`analysis/README.md`](analysis/README.md) · [`CITATION.cff`](CITATION.cff)
 
 # Not All Social Determinants Travel
@@ -8,7 +8,7 @@
 **論文タイトル（日本語）**: 失業率は糖尿病指標の地域差を予測しない——社会的決定因の文脈依存性：全国47都道府県の生態学的研究
 
 **Manuscript status**: Under review at *Primary Care Diabetes* (2026-06-27 submission)  
-**Repository:** https://github.com/haruki00430/NDB_XXX_diabetes_unemployment  
+**Repository:** https://github.com/haruki00430/ndb-unemployment-diabetes-japan  
 **Zenodo DOI:** *to be assigned upon release*
 
 ---
@@ -24,7 +24,7 @@ We conducted a prefecture-level ecological study to examine whether regional une
 ## Repository structure / リポジトリ構造
 
 ```
-NDB_XXX_diabetes_unemployment/
+ndb-unemployment-diabetes-japan/
 ├── analysis/                  # Analysis scripts (01–04) / 解析スクリプト
 │   ├── README.md              # Script guide / スクリプト解説
 │   ├── 01_fetch_unemployment_data.py
@@ -58,8 +58,8 @@ NDB_XXX_diabetes_unemployment/
 ## Quick start / クイックスタート
 
 ```bash
-git clone https://github.com/haruki00430/NDB_XXX_diabetes_unemployment.git
-cd NDB_XXX_diabetes_unemployment
+git clone https://github.com/haruki00430/ndb-unemployment-diabetes-japan.git
+cd ndb-unemployment-diabetes-japan
 
 python -m venv .venv
 # Windows:
@@ -122,7 +122,7 @@ If you use this code or data, please cite:
 Saito H, Ohira T. Not All Social Determinants Travel: A Prefectural Ecological 
 Analysis of Unemployment Rate and Diabetes Prevalence in Japan.
 Primary Care Diabetes (under review, 2026).
-GitHub: https://github.com/haruki00430/NDB_XXX_diabetes_unemployment
+GitHub: https://github.com/haruki00430/ndb-unemployment-diabetes-japan
 Zenodo DOI: [to be assigned]
 ```
 
