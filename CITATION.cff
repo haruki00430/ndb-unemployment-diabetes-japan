@@ -6,8 +6,8 @@ title: "Not All Social Determinants Travel: Replication Code and Prefecture-Leve
 version: 1.0.0
 date-released: 2026-06-27
 license: MIT
-url: "https://github.com/haruki00430/NDB_XXX_diabetes_unemployment"
-repository-code: "https://github.com/haruki00430/NDB_XXX_diabetes_unemployment"
+url: "https://github.com/haruki00430/ndb-unemployment-diabetes-japan"
+repository-code: "https://github.com/haruki00430/ndb-unemployment-diabetes-japan"
 doi: 10.5281/zenodo.20949288
 abstract: >-
   Reproducible code and prefecture-level aggregated data (N = 47) for an
@@ -32,11 +32,14 @@ authors:
     given-names: Haruki
     affiliation: "Department of Epidemiology, Fukushima Medical University School of Medicine"
     orcid: "https://orcid.org/0009-0009-7890-6068"
-    email: haruki00430@gmail.com
+    email: m211039@fmu.ac.jp
   - family-names: Ohira
     given-names: Tetsuya
-    affiliation: "Department of Epidemiology, Fukushima Medical University School of Medicine"
+    affiliation:
+      - "Department of Epidemiology, Fukushima Medical University School of Medicine, Fukushima, Japan"
+      - "Radiation Medical Science Center for the Fukushima Health Management Survey, Fukushima Medical University, Fukushima, Japan"
     orcid: "https://orcid.org/0000-0003-4532-7165"
+    email: teoohira@fmu.ac.jp
 preferred-citation:
   type: article
   title: "Not All Social Determinants Travel: A Prefectural Ecological Analysis of Unemployment Rate and Diabetes Prevalence in Japan"
@@ -45,7 +48,7 @@ preferred-citation:
       given-names: Haruki
     - family-names: Ohira
       given-names: Tetsuya
-  journal: "Primary Care Diabetes"
+  journal: "Journal of Preventive Medicine and Hygiene"
   year: 2026
-  notes: "Manuscript under review; update journal volume/pages and DOI when published."
+  notes: "Submitted to JPMH 2026-06-30. Previously submitted to Primary Care Diabetes 2026-06-27 (Manuscript ID PCD-D-26-00735, desk rejected 2026-06-30). Update volume/pages and DOI when published."
   doi: 10.5281/zenodo.20949288

@@ -7,7 +7,8 @@
 
 **論文タイトル（日本語）**: 失業率は糖尿病指標の地域差を予測しない——社会的決定因の文脈依存性：全国47都道府県の生態学的研究
 
-**Manuscript status**: Under review at *Primary Care Diabetes* (2026-06-27 submission)  
+**Manuscript status**: ~~*Primary Care Diabetes* (PCD-D-26-00735, desk rejected 2026-06-30)~~ → **Submitted** to *Journal of Preventive Medicine and Hygiene* (JPMH) on 2026-06-30  
+**運用メモ**: [`MEMORY.md`](MEMORY.md)（投稿後ステータス・次アクション）  
 **Repository:** https://github.com/haruki00430/ndb-unemployment-diabetes-japan  
 **Zenodo DOI:** https://doi.org/10.5281/zenodo.20949288
 
@@ -21,7 +22,19 @@ We conducted a prefecture-level ecological study to examine whether regional une
 
 ---
 
-## Repository structure / リポジトリ構造
+## Submission / 投稿情報
+
+| 項目 | 内容 |
+|------|------|
+| Journal | [Journal of Preventive Medicine and Hygiene](https://www.jpmh.org) (Pacini Editore) |
+| Submitted | 2026-06-30 |
+| Status | Under review |
+| Portal | https://www.jpmh.org |
+| Previous submission | Primary Care Diabetes (PCD-D-26-00735, 2026-06-27; desk rejected 2026-06-30) |
+
+Post-submission tracking: **[MEMORY.md](MEMORY.md)**
+
+---
 
 ```
 ndb-unemployment-diabetes-japan/
@@ -40,9 +53,12 @@ ndb-unemployment-diabetes-japan/
 ├── results/
 │   └── figures/               # Output figures (PNG, 300 dpi)
 ├── 04_Manuscripts/
-│   ├── Not_All_Social_Determinants_Travel_20260627.docx  # Submission DOCX
-│   ├── Manuscript_PCD.qmd     # Quarto source (PCD-specific)
-│   └── submission_package_PCD/
+│   ├── Manuscript_PCD.qmd              # Quarto source (PCD-specific)
+│   └── submission_package_PCD/         # PCD submission package (DOCX, figures, approved PDF)
+│       ├── Manuscript_PCD.docx
+│       ├── PCD-S-26-00913 (2).pdf      # Final approved submission PDF
+│       └── README_UPLOAD_ORDER.md
+├── MEMORY.md                           # Post-submission ops log / 投稿後運用メモ
 ├── references.bib             # BibTeX references
 ├── vancouver.csl              # Citation style
 ├── REPRODUCE.md               # Reproduction guide / 再現手順書
@@ -110,7 +126,7 @@ For full pipeline instructions, see **[REPRODUCE.md](REPRODUCE.md)**.
 | Name | Affiliation | ORCID |
 |------|-------------|-------|
 | **Haruki Saito** (Corresponding) | Department of Epidemiology, Fukushima Medical University School of Medicine | [0009-0009-7890-6068](https://orcid.org/0009-0009-7890-6068) |
-| Tetsuya Ohira | Department of Epidemiology, Fukushima Medical University School of Medicine | [0000-0003-4532-7165](https://orcid.org/0000-0003-4532-7165) |
+| Tetsuya Ohira | Department of Epidemiology, Fukushima Medical University School of Medicine, Fukushima, Japan; Radiation Medical Science Center for the Fukushima Health Management Survey, Fukushima Medical University, Fukushima, Japan | [0000-0003-4532-7165](https://orcid.org/0000-0003-4532-7165) |
 
 ---
 
@@ -121,7 +137,7 @@ If you use this code or data, please cite:
 ```
 Saito H, Ohira T. Not All Social Determinants Travel: A Prefectural Ecological 
 Analysis of Unemployment Rate and Diabetes Prevalence in Japan.
-Primary Care Diabetes (under review, 2026).
+Journal of Preventive Medicine and Hygiene (submitted 2026-06-30).
 GitHub: https://github.com/haruki00430/ndb-unemployment-diabetes-japan
 Zenodo DOI: https://doi.org/10.5281/zenodo.20949288
 ```
@@ -144,4 +160,4 @@ See also [`CITATION.cff`](CITATION.cff) for machine-readable metadata.
 - 公開集計データ（`data/release/`）のみ CC BY 4.0 で公開
 - 個人識別可能なデータは一切含まれていません
 
-**Last updated**: 2026-06-27
+**Last updated**: 2026-06-30 (Re-submitted to JPMH; PCD desk rejected 2026-06-30)
